@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" style=""><head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ayub Farah portfolio for finance operations, bookkeeping, reconciliation, payroll, and Excel dashboard analytics.">
+    
+    
+    <title>Ayub Farah | Finance Professional &amp; Analyst</title>
+    
+    
+    
+    <style>
+      :root {
+        --bg-main: #0a1128;
+        --bg-surface: #131c35;
+        --bg-surface-hover: #1e293b;
+        --text-primary: #f8fafc;
+        --text-secondary: #94a3b8;
+        --accent-gold: #d4af37;
+        --accent-cyan: #06b6d4;
+        --border-subtle: rgba(255, 255, 255, 0.08);
+        --glass-bg: rgba(10, 17, 40, 0.85);
+        --font-heading: 'Plus Jakarta Sans', sans-serif;
+        --font-body: 'Inter', sans-serif;
+        --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-body);
+        background-color: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.6;
+        overflow-x: hidden;
+        padding-bottom: 80px;
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--font-heading);
+        color: var(--text-primary);
+        line-height: 1.2;
+      }
+
+      h1 {
+        font-size: 3rem;
+        letter-spacing: -0.5px;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+        color: var(--text-primary);
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+      }
+
+      p {
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+      }
+
+      .eyebrow {
+        font-family: var(--font-heading);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--accent-gold);
+        margin-bottom: 1rem;
+        display: block;
+      }
+
+      /* Layout */
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      section {
+        padding: 6rem 0;
+      }
+
+      /* Navigation */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: var(--glass-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-subtle);
+        padding: 1.2rem 0;
+      }
+
+      .nav-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-logo {
+        font-family: var(--font-heading);
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .nav-logo span {
+        color: var(--accent-gold);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent-cyan);
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+      }
+
+      .btn-primary {
+        background: var(--accent-cyan);
+        color: #000;
+      }
+
+      .btn-primary:hover {
+        background: #08c8e8;
+        transform: translateY(-2px);
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: var(--text-primary);
+        border-color: var(--border-subtle);
+      }
+
+      .btn-outline:hover {
+        border-color: var(--accent-gold);
+        color: var(--accent-gold);
+      }
+
+      /* Hero */
+      .hero {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        padding: 4rem 0;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .hero-intro {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        max-width: 600px;
+        margin-bottom: 2.5rem;
+      }
+
+      .trust-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .trust-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border-subtle);
+        padding: 1rem;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        color: var(--accent-cyan);
+        font-weight: 500;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .hero-img-wrap {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--border-subtle);
+        min-height: 420px;
+        background:
+          radial-gradient(circle at top left, rgba(212, 175, 55, 0.18), transparent 35%),
+          linear-gradient(145deg, rgba(6, 182, 212, 0.16), rgba(19, 28, 53, 0.95));
+        padding: 2rem;
+        display: grid;
+        align-content: end;
+      }
+
+      .profile-panel {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .profile-initials {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: var(--accent-gold);
+        color: #0a1128;
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        font-weight: 800;
+      }
+
+      .metric-row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1rem;
+        align-items: center;
+        border: 1px solid var(--border-subtle);
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 8px;
+        padding: 0.9rem 1rem;
+      }
+
+      .metric-row span {
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+      }
+
+      .metric-row strong {
+        color: var(--accent-cyan);
+      }
+
+      /* Credibility Strip */
+      .cred-strip {
+        border-top: 1px solid var(--border-subtle);
+        border-bottom: 1px solid var(--border-subtle);
+        background: rgba(255, 255, 255, 0.01);
+        padding: 2rem 0;
+      }
+
+      .cred-grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+
+      .cred-item {
+        font-family: var(--font-heading);
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* Timeline Cards */
+      .timeline-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 8px;
+        padding: 2.5rem;
+        margin-bottom: 1.5rem;
+        transition: border-color 0.3s;
+      }
+
+      .timeline-card:hover {
+        border-color: var(--accent-gold);
+      }
+
+      .timeline-meta {
+        font-size: 0.9rem;
+        color: var(--accent-cyan);
+        margin-bottom: 1rem;
+      }
+
+      .timeline-card ul {
+        padding-left: 1.2rem;
+        color: var(--text-secondary);
+      }
+
+      .timeline-card li {
+        margin-bottom: 0.5rem;
+      }
+
+      /* Portfolio Grid */
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        gap: 2rem;
+      }
+
+      .project-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 8px;
+        overflow: hidden;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-soft);
+        border-color: var(--accent-cyan);
+      }
+
+      .project-img {
+        width: 100%;
+        height: 260px;
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      .dashboard-visual {
+        display: grid;
+        gap: 1rem;
+        padding: 1.5rem;
+        background:
+          linear-gradient(135deg, rgba(6, 182, 212, 0.16), rgba(212, 175, 55, 0.12)),
+          var(--bg-main);
+      }
+
+      .chart-bars {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 0.55rem;
+        align-items: end;
+        height: 118px;
+      }
+
+      .chart-bars span {
+        display: block;
+        border-radius: 4px 4px 0 0;
+        background: linear-gradient(180deg, var(--accent-cyan), rgba(6, 182, 212, 0.2));
+      }
+
+      .dashboard-line {
+        height: 3px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--accent-gold), var(--accent-cyan));
+      }
+
+      .dashboard-kpis {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.7rem;
+      }
+
+      .dashboard-kpis span {
+        min-height: 46px;
+        border: 1px solid var(--border-subtle);
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .project-info {
+        padding: 1.5rem;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .tag {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border-subtle);
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+        border-radius: 4px;
+        color: var(--text-primary);
+      }
+
+      /* Grids for Services, Skills, Certs */
+      .grid-3,
+      .grid-4 {
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .box-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        padding: 2rem;
+        border-radius: 8px;
+        transition: background 0.3s;
+      }
+
+      .box-card:hover {
+        background: var(--bg-surface-hover);
+      }
+
+      .skill-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .skill-list li {
+        margin-bottom: 0.8rem;
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .skill-list li::before {
+        content: '>';
+        color: var(--accent-cyan);
+        font-size: 0.8rem;
+      }
+
+      /* Bottom Bar */
+      .bottom-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid var(--border-subtle);
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        z-index: 1000;
+      }
+
+      footer {
+        text-align: center;
+        padding: 3rem 0;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        border-top: 1px solid var(--border-subtle);
+      }
+
+      /* Scroll Animation */
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .hero-grid,
+        .portfolio-grid {
+          grid-template-columns: 1fr;
+        }
+        .grid-3,
+        .grid-4 {
+          grid-template-columns: 1fr 1fr;
+        }
+        .nav-links {
+          display: none;
+        }
+        h1 {
+          font-size: 2.2rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .grid-3,
+        .grid-4 {
+          grid-template-columns: 1fr;
+        }
+        .trust-cards {
+          grid-template-columns: 1fr;
+        }
+        .container {
+          padding: 0 1.25rem;
+        }
+        .hero {
+          min-height: auto;
+        }
+        .hero-img-wrap {
+          min-height: 320px;
+        }
+      }
+
+      /* Print Styles */
+      @media print {
+        body {
+          background: #fff;
+          color: #000;
+          padding-bottom: 0;
+        }
+        nav,
+        .bottom-bar,
+        .cred-strip,
+        .btn {
+          display: none !important;
+        }
+        .container {
+          max-width: 100%;
+          padding: 0;
+        }
+        section {
+          padding: 2rem 0;
+          page-break-inside: auto;
+        }
+        .box-card,
+        .project-card,
+        .timeline-card {
+          border: 1px solid #ccc;
+          background: #fff;
+          color: #000;
+          page-break-inside: avoid;
+          margin-bottom: 1rem;
+        }
+        h1,
+        h2,
+        h3,
+        p,
+        span,
+        div {
+          color: #000 !important;
+        }
+        .hero-img-wrap {
+          display: none;
+        }
+        .hero-grid {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body style="">
+    
+
+    <nav>
+      <div class="container nav-inner">
+        <div class="nav-logo">Ayub<span>Farah</span></div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills &amp; Education</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="hero container reveal">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Junior Accountant | ACCA Candidate</span>
+          <h1>Executive Financial Operations &amp; Analytics.</h1>
+          <p class="hero-intro">
+            Based in Nairobi, Kenya. I engineer absolute clarity from complex financial data through disciplined
+            bookkeeping, rigorous reconciliation, and the design of intuitive, executive-ready reporting dashboards.
+          </p>
+
+          <div class="trust-cards">
+            <div class="trust-card">ACCA Candidate</div>
+            <div class="trust-card">Full-Cycle Bookkeeping</div>
+            <div class="trust-card">Excel Dashboarding</div>
+            <div class="trust-card">AP/AR &amp; Payroll</div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Contact Me</a>
+            <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
+            <a href="mailto:ayubfarah67@email.com" class="btn btn-outline">Email Ayub</a>
+          </div>
+        </div>
+        <div class="hero-img-wrap" aria-label="Ayub Farah finance portfolio summary">
+          <div class="profile-panel">
+            <div class="profile-initials">AF</div>
+            <div class="metric-row"><span>Current focus</span><strong>Finance Ops</strong></div>
+            <div class="metric-row"><span>Reporting stack</span><strong>Excel + VBA</strong></div>
+            <div class="metric-row"><span>Availability</span><strong>Roles + Freelance</strong></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="cred-strip reveal">
+      <div class="container cred-grid">
+        <div class="cred-item">Reporting Ready</div>
+        <div class="cred-item">Finance Operations</div>
+        <div class="cred-item">Dashboard Design</div>
+        <div class="cred-item">Open to Roles &amp; Freelance</div>
+      </div>
+    </div>
+
+    <section id="about" class="container reveal">
+      <span class="eyebrow">Profile</span>
+      <h2>About Me</h2>
+      <div style="max-width: 800px">
+        <p>
+          I am a Junior Accountant with hands-on experience in full-cycle bookkeeping, AP/AR administration, payroll
+          processing, fixed assets, and cost control. As an active ACCA candidate (7/13 papers completed), I maintain a
+          stringent standard for compliance and accuracy.
+        </p>
+        <p>
+          My core differentiator is my technical capability. I utilize QuickBooks, Xero, Zoho Books, and advanced Excel
+          VBA not just to record history, but to automate workflows and build strategic dashboards that give business
+          leaders and freelance clients an accurate, real-time pulse on their financial health.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience" class="container reveal">
+      <span class="eyebrow">Career History</span>
+      <h2>Experience</h2>
+
+      <div class="timeline-card reveal">
+        <h3>Accountant</h3>
+        <div class="timeline-meta">VUN Trading LTD, Nairobi, Kenya | Aug 2025 - Present</div>
+        <ul>
+          <li>
+            Manage end-to-end bookkeeping, general ledger postings, bank reconciliations, and comprehensive month-end
+            close procedures.
+          </li>
+          <li>
+            Administer AP/AR operations, capturing payment discounts, expediting overdue invoice recovery, and
+            streamlining corporate expense processing.
+          </li>
+          <li>
+            Process complex monthly payroll structures encompassing fixed salaries and variable sales commissions,
+            ensuring strict PAYE compliance.
+          </li>
+          <li>
+            Maintain accurate schedules for fixed assets, depreciation, and corporate taxes, providing robust support
+            for internal and external audits.
+          </li>
+          <li>
+            Develop and present weekly sales and cost analysis reports, enabling data-driven pricing and supplier
+            decisions that actively reduce operational costs.
+          </li>
+        </ul>
+      </div>
+
+      <div class="timeline-card reveal">
+        <h3>Finance &amp; Administration Intern</h3>
+        <div class="timeline-meta">Kosokoso Police Station, Kampala, Uganda | Jan 2025 - Mar 2025</div>
+        <ul>
+          <li>
+            Maintained precise daily financial records and led the digital transformation of legacy files to
+            significantly improve audit readiness.
+          </li>
+          <li>
+            Supported payroll administration, operational expense tracking, and the formulation of quarterly financial
+            reports in Excel.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="portfolio" class="container reveal">
+      <span class="eyebrow">Analytics &amp; Reporting</span>
+      <h2>Portfolio Showcase</h2>
+      <p style="max-width: 700px; margin-bottom: 3rem">
+        A curated selection of dynamic financial dashboards demonstrating proficiency in data visualization, budget
+        variance, long-term forecasting, and cash flow management.
+      </p>
+
+      <div class="portfolio-grid">
+        <div class="project-card reveal">
+          <div class="project-img dashboard-visual" aria-label="Executive Cash Flow dashboard visual">
+            <div class="dashboard-kpis"><span></span><span></span><span></span></div>
+            <div class="chart-bars"><span style="height: 45%"></span><span style="height: 72%"></span><span style="height: 58%"></span><span style="height: 88%"></span><span style="height: 66%"></span><span style="height: 95%"></span></div>
+            <div class="dashboard-line"></div>
+          </div>
+          <div class="project-info">
+            <h3>Executive Cash Flow Dashboard</h3>
+            <p>
+              A comprehensive tracking tool visualizing inflows, outflows, net cash trajectories, and expense breakdowns
+              for rapid executive oversight.
+            </p>
+            <div class="tags">
+              <span class="tag">Excel</span>
+              <span class="tag">Cash Flow</span>
+              <span class="tag">Dashboard Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-img dashboard-visual" aria-label="Debt Payoff dashboard visual">
+            <div class="dashboard-kpis"><span></span><span></span><span></span></div>
+            <div class="chart-bars"><span style="height: 94%"></span><span style="height: 78%"></span><span style="height: 68%"></span><span style="height: 48%"></span><span style="height: 34%"></span><span style="height: 22%"></span></div>
+            <div class="dashboard-line"></div>
+          </div>
+          <div class="project-info">
+            <h3>Debt Payoff Dashboard</h3>
+            <p>
+              An analytical view of debt reduction progress, tracking starting balances, current liabilities, and
+              accrued interest impacts.
+            </p>
+            <div class="tags">
+              <span class="tag">Liability Analysis</span>
+              <span class="tag">Financial Reporting</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-img dashboard-visual" aria-label="Monthly Income and Expense dashboard visual">
+            <div class="dashboard-kpis"><span></span><span></span><span></span></div>
+            <div class="chart-bars"><span style="height: 54%"></span><span style="height: 82%"></span><span style="height: 41%"></span><span style="height: 76%"></span><span style="height: 62%"></span><span style="height: 89%"></span></div>
+            <div class="dashboard-line"></div>
+          </div>
+          <div class="project-info">
+            <h3>Monthly Income &amp; Expense</h3>
+            <p>
+              A profitability dashboard delivering category-level insights into operational expenses and revenue streams
+              alongside target milestones.
+            </p>
+            <div class="tags">
+              <span class="tag">Profitability</span>
+              <span class="tag">Variance Tracking</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-img dashboard-visual" aria-label="Year 2025 Financial Summary dashboard visual">
+            <div class="dashboard-kpis"><span></span><span></span><span></span></div>
+            <div class="chart-bars"><span style="height: 38%"></span><span style="height: 51%"></span><span style="height: 69%"></span><span style="height: 73%"></span><span style="height: 86%"></span><span style="height: 91%"></span></div>
+            <div class="dashboard-line"></div>
+          </div>
+          <div class="project-info">
+            <h3>Year 2025 Financial Summary</h3>
+            <p>
+              An overarching performance dashboard summarizing annual income, expense distributions, and net profit
+              margins.
+            </p>
+            <div class="tags">
+              <span class="tag">Annual Review</span>
+              <span class="tag">Performance Metrics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-img dashboard-visual" aria-label="Monthly Budget and Goal Tracker dashboard visual">
+            <div class="dashboard-kpis"><span></span><span></span><span></span></div>
+            <div class="chart-bars"><span style="height: 62%"></span><span style="height: 48%"></span><span style="height: 79%"></span><span style="height: 56%"></span><span style="height: 84%"></span><span style="height: 70%"></span></div>
+            <div class="dashboard-line"></div>
+          </div>
+          <div class="project-info">
+            <h3>Monthly Budget &amp; Goal Tracker</h3>
+            <p>
+              A precise financial tracker built around strict monthly budgeting, categorical expense monitoring, and
+              objective realization.
+            </p>
+            <div class="tags">
+              <span class="tag">Budget Analysis</span>
+              <span class="tag">Reporting</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-img dashboard-visual" aria-label="Five-Year Financial Trends dashboard visual">
+            <div class="dashboard-kpis"><span></span><span></span><span></span></div>
+            <div class="chart-bars"><span style="height: 28%"></span><span style="height: 44%"></span><span style="height: 57%"></span><span style="height: 71%"></span><span style="height: 80%"></span><span style="height: 96%"></span></div>
+            <div class="dashboard-line"></div>
+          </div>
+          <div class="project-info">
+            <h3>5-Year Financial Trends</h3>
+            <p>
+              A macro-analytical dashboard comparing historical income and expense patterns to forecast long-term
+              profitability shifts.
+            </p>
+            <div class="tags">
+              <span class="tag">Trend Analysis</span>
+              <span class="tag">Forecasting</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-img dashboard-visual" aria-label="Multi-Year Analytics dashboard visual">
+            <div class="dashboard-kpis"><span></span><span></span><span></span></div>
+            <div class="chart-bars"><span style="height: 74%"></span><span style="height: 43%"></span><span style="height: 88%"></span><span style="height: 52%"></span><span style="height: 91%"></span><span style="height: 67%"></span></div>
+            <div class="dashboard-line"></div>
+          </div>
+          <div class="project-info">
+            <h3>Multi-Year Analytics</h3>
+            <p>
+              A strategic reporting interface highlighting historical category performance to identify long-range
+              operational efficiencies.
+            </p>
+            <div class="tags">
+              <span class="tag">Cost Control</span>
+              <span class="tag">Data Visualization</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-img dashboard-visual" aria-label="Year 2026 Budget vs Actual dashboard visual">
+            <div class="dashboard-kpis"><span></span><span></span><span></span></div>
+            <div class="chart-bars"><span style="height: 57%"></span><span style="height: 63%"></span><span style="height: 49%"></span><span style="height: 82%"></span><span style="height: 75%"></span><span style="height: 90%"></span></div>
+            <div class="dashboard-line"></div>
+          </div>
+          <div class="project-info">
+            <h3>Year 2026 Budget vs Actual</h3>
+            <p>
+              A corporate governance tool visualizing monthly income against set budgets, detailing savings rates and
+              expense deviations.
+            </p>
+            <div class="tags">
+              <span class="tag">Corporate Finance</span>
+              <span class="tag">Variance Analysis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="container reveal">
+      <span class="eyebrow">Freelance Offerings</span>
+      <h2>Client Services</h2>
+      <div class="grid-4">
+        <div class="box-card">
+          <h3>Bookkeeping Support</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0">
+            Comprehensive ledger management using modern platforms to ensure your books remain accurate and compliant.
+          </p>
+        </div>
+        <div class="box-card">
+          <h3>Financial Dashboard Design</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0">
+            Creation of automated, dynamic Excel dashboards tailored to give you instant clarity on your metrics.
+          </p>
+        </div>
+        <div class="box-card">
+          <h3>Reconciliation Support</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0">
+            Expert resolution of statement discrepancies, often utilizing custom VBA to accelerate accuracy.
+          </p>
+        </div>
+        <div class="box-card">
+          <h3>Budget &amp; Cash Flow</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0">
+            Implementation of rigorous tracking systems to monitor liquidity and safeguard your business runway.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="independent" class="container reveal">
+      <span class="eyebrow">Projects</span>
+      <h2>Independent Work</h2>
+
+      <div class="timeline-card reveal">
+        <h3>Small Business Accounting &amp; POS Support</h3>
+        <div class="timeline-meta">Freelance &amp; Volunteer | Nairobi, Kenya | 2024 - Present</div>
+        <p>
+          Configured robust bookkeeping systems and simplified POS trackers in Excel and QuickBooks Online, successfully
+          streamlining financial operations for 3 local small businesses.
+        </p>
+      </div>
+
+      <div class="timeline-card reveal">
+        <h3>Excel VBA Automation for Reconciliation</h3>
+        <div class="timeline-meta">Personal Project | 2024</div>
+        <p>
+          Architected a bespoke Excel VBA utility that algorithmically matches transactions, reducing manual
+          reconciliation time by 70% while generating automated summary outputs.
+        </p>
+      </div>
+
+      <div class="timeline-card reveal">
+        <h3>Real Estate Expense &amp; Client Tracker</h3>
+        <div class="timeline-meta">Freelance Project | 2025</div>
+        <p>
+          Developed a dedicated Excel dashboard enabling a real estate client to efficiently track tenant payments,
+          outstanding balances, property-specific expenses, and net monthly cash flow.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="container reveal">
+      <span class="eyebrow">Expertise</span>
+      <h2>Technical Skills</h2>
+      <div class="grid-3">
+        <div class="box-card">
+          <h3 style="margin-bottom: 1.5rem">Accounting Systems</h3>
+          <ul class="skill-list">
+            <li>QuickBooks (Online &amp; Desktop)</li>
+            <li>Xero</li>
+            <li>Zoho Books</li>
+            <li>Busy Accounting</li>
+          </ul>
+        </div>
+        <div class="box-card">
+          <h3 style="margin-bottom: 1.5rem">Excel &amp; Analytics</h3>
+          <ul class="skill-list">
+            <li>Pivot Tables &amp; Advanced Functions</li>
+            <li>VLOOKUP / XLOOKUP</li>
+            <li>Excel VBA &amp; Macros</li>
+            <li>Reporting Dashboards</li>
+          </ul>
+        </div>
+        <div class="box-card">
+          <h3 style="margin-bottom: 1.5rem">Core Accounting</h3>
+          <ul class="skill-list">
+            <li>Full-Cycle Bookkeeping</li>
+            <li>AP/AR &amp; Payroll</li>
+            <li>Fixed Assets &amp; Tax Compliance</li>
+            <li>Bank Reconciliation &amp; Month-end</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="container reveal">
+      <span class="eyebrow">Background</span>
+      <h2>Education &amp; Credentials</h2>
+      <div class="grid-3">
+        <div class="box-card">
+          <h3 style="color: var(--accent-gold)">ACCA</h3>
+          <p style="font-size: 0.9rem; font-weight: 500; color: #fff; margin-bottom: 0.5rem">
+            Association of Chartered Certified Accountants
+          </p>
+          <p style="font-size: 0.85rem; margin-bottom: 0">Self-study, Nairobi<br>7 of 13 papers completed</p>
+        </div>
+        <div class="box-card">
+          <h3 style="color: var(--accent-gold)">BBA</h3>
+          <p style="font-size: 0.9rem; font-weight: 500; color: #fff; margin-bottom: 0.5rem">Accounting &amp; Finance</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0">Cavendish University Uganda<br>Jun 2022 - Aug 2025</p>
+        </div>
+        <div class="box-card">
+          <h3 style="color: var(--accent-cyan); margin-bottom: 1rem">Certifications</h3>
+          <ul class="skill-list" style="font-size: 0.85rem">
+            <li>QuickBooks ProAdvisor</li>
+            <li>Xero Certified Advisor</li>
+            <li>Advanced Excel for Business - Coursera</li>
+            <li>Data Analysis - Coursera</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container reveal">
+      <span class="eyebrow">Connect</span>
+      <h2>Contact &amp; Social</h2>
+      <p style="max-width: 600px; margin-bottom: 3rem">
+        Whether you are a hiring manager looking to strengthen your finance team or a business owner in need of
+        bookkeeping and analytical support, I am ready to add immediate value.
+      </p>
+
+      <div class="grid-4">
+        <div class="box-card" style="text-align: center">
+          <h3 style="font-size: 1rem; color: var(--accent-gold)">Email</h3>
+          <a href="mailto:ayubfarah67@email.com" style="color: var(--text-primary); text-decoration: none; font-size: 0.9rem">ayubfarah67@email.com</a>
+        </div>
+        <div class="box-card" style="text-align: center">
+          <h3 style="font-size: 1rem; color: var(--accent-gold)">Phone</h3>
+          <a href="tel:+254712644491" style="color: var(--text-primary); text-decoration: none; font-size: 0.9rem">+254 712 644491</a>
+        </div>
+
+        
+        <div class="box-card" style="text-align: center">
+          <h3 style="font-size: 1rem; color: var(--accent-cyan)">LinkedIn Profile</h3>
+          <a href="#contact" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem">Add LinkedIn URL</a>
+        </div>
+
+        
+        <div class="box-card" style="text-align: center">
+          <h3 style="font-size: 1rem; color: var(--accent-cyan)">GitHub Portfolio</h3>
+          <a href="#contact" style="color: var(--text-secondary); text-decoration: none; font-size: 0.9rem">Add GitHub URL</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="bottom-bar">
+      <a href="#contact" class="btn btn-primary">Contact Ayub</a>
+      <button class="btn btn-outline" type="button" id="printButton">Print / Save as PDF</button>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p style="margin: 0">&copy; 2026 Ayub Farah. Built for executive finance presentation and portfolio use.</p>
+      </div>
+    </footer>
+
+    
+  
+
+<script>
+  const revealItems = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+  document.getElementById('printButton').addEventListener('click', () => window.print());
+</script>
+</body></html>
