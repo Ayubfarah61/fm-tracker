@@ -231,50 +231,16 @@
         overflow: hidden;
         border: 1px solid var(--border-subtle);
         min-height: 420px;
-        background:
-          radial-gradient(circle at top left, rgba(212, 175, 55, 0.18), transparent 35%),
-          linear-gradient(145deg, rgba(6, 182, 212, 0.16), rgba(19, 28, 53, 0.95));
-        padding: 2rem;
-        display: grid;
-        align-content: end;
+        background: var(--bg-surface);
       }
 
-      .profile-panel {
-        display: grid;
-        gap: 1rem;
-      }
-
-      .profile-initials {
-        width: 96px;
-        height: 96px;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        background: var(--accent-gold);
-        color: #0a1128;
-        font-family: var(--font-heading);
-        font-size: 2rem;
-        font-weight: 800;
-      }
-
-      .metric-row {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 1rem;
-        align-items: center;
-        border: 1px solid var(--border-subtle);
-        background: rgba(255, 255, 255, 0.04);
-        border-radius: 8px;
-        padding: 0.9rem 1rem;
-      }
-
-      .metric-row span {
-        color: var(--text-secondary);
-        font-size: 0.85rem;
-      }
-
-      .metric-row strong {
-        color: var(--accent-cyan);
+      .hero-img-wrap img {
+        width: 100%;
+        height: 100%;
+        min-height: 420px;
+        display: block;
+        object-fit: cover;
+        object-position: center top;
       }
 
       /* Credibility Strip */
@@ -356,6 +322,9 @@
         width: 100%;
         height: 260px;
         border-bottom: 1px solid var(--border-subtle);
+        display: block;
+        object-fit: cover;
+        object-position: center;
       }
 
       .dashboard-visual {
@@ -621,16 +590,11 @@
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Contact Me</a>
             <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
-            <a href="mailto:ayubfarah67@email.com" class="btn btn-outline">Email Ayub</a>
+            <a href="assets/cv/Ayub-Farah-CV.pdf" target="_blank" class="btn btn-outline">Download CV</a>
           </div>
         </div>
         <div class="hero-img-wrap" aria-label="Ayub Farah finance portfolio summary">
-          <div class="profile-panel">
-            <div class="profile-initials">AF</div>
-            <div class="metric-row"><span>Current focus</span><strong>Finance Ops</strong></div>
-            <div class="metric-row"><span>Reporting stack</span><strong>Excel + VBA</strong></div>
-            <div class="metric-row"><span>Availability</span><strong>Roles + Freelance</strong></div>
-          </div>
+          <img src="assets/images/profile.jpeg" alt="Ayub Farah">
         </div>
       </div>
     </header>
@@ -718,11 +682,7 @@
 
       <div class="portfolio-grid">
         <div class="project-card reveal">
-          <div class="project-img dashboard-visual" aria-label="Executive Cash Flow dashboard visual">
-            <div class="dashboard-kpis"><span></span><span></span><span></span></div>
-            <div class="chart-bars"><span style="height: 45%"></span><span style="height: 72%"></span><span style="height: 58%"></span><span style="height: 88%"></span><span style="height: 66%"></span><span style="height: 95%"></span></div>
-            <div class="dashboard-line"></div>
-          </div>
+          <img src="assets/projects/income-expense-summary.png" alt="Income and expense summary dashboard" class="project-img">
           <div class="project-info">
             <h3>Executive Cash Flow Dashboard</h3>
             <p>
@@ -738,11 +698,7 @@
         </div>
 
         <div class="project-card reveal">
-          <div class="project-img dashboard-visual" aria-label="Debt Payoff dashboard visual">
-            <div class="dashboard-kpis"><span></span><span></span><span></span></div>
-            <div class="chart-bars"><span style="height: 94%"></span><span style="height: 78%"></span><span style="height: 68%"></span><span style="height: 48%"></span><span style="height: 34%"></span><span style="height: 22%"></span></div>
-            <div class="dashboard-line"></div>
-          </div>
+          <img src="assets/projects/debt-tracker.png" alt="Debt payoff dashboard" class="project-img">
           <div class="project-info">
             <h3>Debt Payoff Dashboard</h3>
             <p>
@@ -757,11 +713,7 @@
         </div>
 
         <div class="project-card reveal">
-          <div class="project-img dashboard-visual" aria-label="Monthly Income and Expense dashboard visual">
-            <div class="dashboard-kpis"><span></span><span></span><span></span></div>
-            <div class="chart-bars"><span style="height: 54%"></span><span style="height: 82%"></span><span style="height: 41%"></span><span style="height: 76%"></span><span style="height: 62%"></span><span style="height: 89%"></span></div>
-            <div class="dashboard-line"></div>
-          </div>
+          <img src="assets/projects/monthly-income-expense.png" alt="Monthly income and expense dashboard" class="project-img">
           <div class="project-info">
             <h3>Monthly Income &amp; Expense</h3>
             <p>
@@ -776,11 +728,7 @@
         </div>
 
         <div class="project-card reveal">
-          <div class="project-img dashboard-visual" aria-label="Year 2025 Financial Summary dashboard visual">
-            <div class="dashboard-kpis"><span></span><span></span><span></span></div>
-            <div class="chart-bars"><span style="height: 38%"></span><span style="height: 51%"></span><span style="height: 69%"></span><span style="height: 73%"></span><span style="height: 86%"></span><span style="height: 91%"></span></div>
-            <div class="dashboard-line"></div>
-          </div>
+          <img src="assets/projects/yearly-income-expense.png" alt="Yearly income and expense dashboard" class="project-img">
           <div class="project-info">
             <h3>Year 2025 Financial Summary</h3>
             <p>
@@ -795,20 +743,16 @@
         </div>
 
         <div class="project-card reveal">
-          <div class="project-img dashboard-visual" aria-label="Monthly Budget and Goal Tracker dashboard visual">
-            <div class="dashboard-kpis"><span></span><span></span><span></span></div>
-            <div class="chart-bars"><span style="height: 62%"></span><span style="height: 48%"></span><span style="height: 79%"></span><span style="height: 56%"></span><span style="height: 84%"></span><span style="height: 70%"></span></div>
-            <div class="dashboard-line"></div>
-          </div>
+          <img src="assets/projects/small-business-bookkeeping.png" alt="Small business bookkeeping dashboard" class="project-img">
           <div class="project-info">
-            <h3>Monthly Budget &amp; Goal Tracker</h3>
+            <h3>Small Business Bookkeeping</h3>
             <p>
-              A precise financial tracker built around strict monthly budgeting, categorical expense monitoring, and
-              objective realization.
+              A practical bookkeeping dashboard built to keep small-business income, expenses, and performance
+              indicators organized.
             </p>
             <div class="tags">
-              <span class="tag">Budget Analysis</span>
-              <span class="tag">Reporting</span>
+              <span class="tag">Bookkeeping</span>
+              <span class="tag">Small Business</span>
             </div>
           </div>
         </div>
@@ -1030,7 +974,7 @@
     </section>
 
     <div class="bottom-bar">
-      <a href="#contact" class="btn btn-primary">Contact Ayub</a>
+      <a href="assets/cv/Ayub-Farah-CV.pdf" target="_blank" class="btn btn-primary">Download CV PDF</a>
       <button class="btn btn-outline" type="button" id="printButton">Print / Save as PDF</button>
     </div>
 
